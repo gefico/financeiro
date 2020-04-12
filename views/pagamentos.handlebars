@@ -1,0 +1,10 @@
+<h1>LISTA DE PAGAMENTOS</h1>
+<hr>
+{{#each pagamentos}}
+   <b>Id</b>: {{dataValues.id}} <br>
+   <b>Descriçao</b>: {{dataValues.descricao}} <br>
+   <b>Valor</b>: {{dataValues.valor}} <br>
+   <b>Cadastrado</b>: {{#formatDate dataValues.createdAt}} {{/formatDate}} <br>
+   <a href="/del-pagamento/{{dataValues.id}}"><button>Apagar</button></a>
+   <hr>
+{{/each}}
